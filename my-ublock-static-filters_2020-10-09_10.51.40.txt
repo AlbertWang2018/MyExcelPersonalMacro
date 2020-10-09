@@ -1,0 +1,211 @@
+! 2020/1/19 https://zhidao.baidu.com
+zhidao.baidu.com##.wgt-answer-add-tag
+
+! 2020/1/21 https://www.baidu.com
+www.baidu.com###content_right
+
+! 2020/3/25 https://zhidao.baidu.com
+zhidao.baidu.com###qb-side
+
+*.baidustatic.com/*
+m.baidu.com/m*
+cpro.baidu.com/*
+
+! 2017/12/4 下午2:26:01 http://club.excelhome.net/thread-767881-1-1.html
+club.excelhome.net###sitefocus > .bm
+
+! 2017/12/5 上午10:06:13 http://club.excelhome.net/thread-1251763-1-1.html
+||club.excelhome.net/static/image/common/ad*$image
+
+! 2017/12/14 下午1:17:25 https://wenku.baidu.com/view/1ebbc0f6a26925c52cc5bf8a.html
+||edu-ad-test-cdn.cdn.bcebos.com/*$image
+
+! 2017/12/15 下午6:05:01 http://bbs.csdn.net/topics/392071571
+bbs.csdn.net###layerd
+
+! 2017/12/15 下午6:08:19 https://zhidao.baidu.com/question/1737957890358324867.html
+zhidao.baidu.com##.line.mod-shadow.wgt-bottom-union > h2
+
+! 2017/12/15 下午6:08:34 https://zhidao.baidu.com/question/1737957890358324867.html
+||mini.hao123.com/*$subdocument
+
+! 2017/12/18 下午4:56:31 http://blog.csdn.net/wtsolutions/article/details/76381508
+||c.csdnimg.cn/comm_ask/images/qrcode.png$image
+
+! 2017/12/18 下午4:56:42 http://blog.csdn.net/wtsolutions/article/details/76381508
+blog.csdn.net##.layer_close.J_close
+
+! 2017/12/18 下午5:26:21 http://news.hexun.com/2017-12-18/192006761.html
+news.hexun.com###newsPopWin
+
+! 2017/12/21 下午4:01:54 https://wenku.baidu.com/view/320f541cc850ad02df804101.html
+wenku.baidu.com##.tiger-shifen-dialog-mask
+
+! 2017/12/21 下午4:03:35 https://wenku.baidu.com/view/320f541cc850ad02df804101.html
+||edu-wenku.bdimg.com/*$image
+
+! 2017/12/21 下午4:03:48 https://wenku.baidu.com/view/320f541cc850ad02df804101.html
+wenku.baidu.com##.tiger-shifen-dialog-inner
+
+! 2017/12/21 下午4:03:56 https://wenku.baidu.com/view/320f541cc850ad02df804101.html
+wenku.baidu.com##.click-btn.tiger-shifen-dialog
+
+! 2017/12/22 下午12:48:57 https://www.zhihu.com/question/19604979
+www.zhihu.com##.HitQrcode
+
+! 2018/1/5 下午1:45:35 http://bbs.tianya.cn/post-1179-1269-1.shtml
+||801.tianya.cn/2016/alimama/tanchuang-1.html$subdocument
+
+! 2018/1/5 下午1:45:45 http://bbs.tianya.cn/post-1179-1269-1.shtml
+bbs.tianya.cn##.ty-msg-hd
+
+! 2018/1/10 下午5:06:57 http://blog.sina.com.cn/s/blog_5f2e119b0101t0po.html
+||blog.sina.com.cn###sinaadtk_sandbox_id_1
+
+! 2018/1/10 下午5:07:18 http://blog.sina.com.cn/s/blog_5f2e119b0101t0po.html
+||s3.pfp.sina.net/ea/ad/2/5/cc988ce8acf8e8d6507dd091a20ae2e3.jpg$image
+
+! 2018/1/10 下午5:07:29 http://blog.sina.com.cn/s/blog_5f2e119b0101t0po.html
+blog.sina.com.cn###sinaadtk_sandbox_id_0
+
+! 2018/1/10 下午5:07:41 http://blog.sina.com.cn/s/blog_5f2e119b0101t0po.html
+||d1.sina.com.cn/litong/zhitou/sinaads/60x18_2_close.gif$image
+
+! 2018/1/10 下午5:07:46 http://blog.sina.com.cn/s/blog_5f2e119b0101t0po.html
+||d2.sina.com.cn/litong/zhitou/sinaads/60x18_1_close.gif$image
+
+! 2018/1/10 下午5:07:52 http://blog.sina.com.cn/s/blog_5f2e119b0101t0po.html
+blog.sina.com.cn###sinaadToolkitBox0 > div:nth-of-type(1)
+
+! 2018/1/10 下午5:07:57 http://blog.sina.com.cn/s/blog_5f2e119b0101t0po.html
+||blog.sina.com.cn/lm/mini/*$subdocument
+
+||cpro.baidu.com*
+||pos.baidu.com*
+
+! 2018/1/16 下午1:26:30 http://blog.csdn.net/u011077672/article/details/50535073
+||*.iteye.com*$subdocument
+
+! 2018/1/22 上午10:08:31 http://www.hjenglish.com/new/p433645/
+||resu8.hjfile.cn/*$image
+
+! 2018/1/22 上午10:08:34 http://www.hjenglish.com/new/p433645/
+www.hjenglish.com##a[href^="https://u8.hujiang.com/click"]
+
+! 2018/1/22 上午10:08:38 http://www.hjenglish.com/new/p433645/
+www.hjenglish.com###bottomBar > div
+
+! 2018/1/24 下午4:03:19 http://club.excelhome.net/thread-396643-1-1.html
+||img.excelhome.net/iexcelhome-weixin03.png$image
+
+! 2018/1/24 下午4:03:34 http://club.excelhome.net/thread-253329-1-1.html
+||img.excelhome.net/iexcelhome-weixin03.png$image
+
+! 2018/2/6 下午2:44:05 https://wenku.baidu.com/view/7fca402c42323968011ca300a6c30c225901f00b.html?from=search
+||edu-ad-test-cdn.cdn.bcebos.com/*$image
+
+! 2018/2/10 上午8:50:28 http://www.oschina.net/news/92290/python-3-7-0-a4-released
+||static.oschina.net/uploads/space/*$image
+
+! 2018/2/11 下午4:16:32
+
+! 2018/2/24 下午5:08:19 http://fanyi.baidu.com/?aldtype=16047#en/zh/as%20found
+||fanyi.bdstatic.com/static/translation/img/translate/*$image
+
+! 2018/2/25 下午5:23:42 http://www.360doc.com/content/16/0314/12/1497364_542072093.shtml
+www.360doc.com###tanxssp-outer-iframemm_11220363_1101997_26568831
+
+! 2018/2/25 下午5:25:57 http://www.360doc.com/content/16/0314/12/1497364_542072093.shtml
+||www.360doc.com/ad/*$subdocument
+
+! 2018/5/7 下午3:00:44 http://club.excelhome.net/thread-726615-2-1.html
+||img.excelhome.net/*$image
+
+! 2018/6/12 上午10:39:51 https://blog.csdn.net/qq_28888837/article/details/80395631
+blog.csdn.net##div.recommend-ad-box.recommend-item-box:nth-of-type(3)
+
+! 2018/6/14 上午9:05:45 https://zhidao.baidu.com/question/941646449430433892.html
+zhidao.baidu.com##.mod-shadow.wgt-daily
+
+! 2018/7/17 下午5:35:46 https://wenku.baidu.com/view/7e4a7076fd0a79563d1e7252.html
+||edu-ad-test-cdn.cdn.bcebos.com/*$image
+
+! 2018/8/3 上午9:39:12 https://www.2cto.com/kf/201804/741656.html
+||jiansuo.dsxdn.com/*$subdocument
+
+! 2018/8/3 下午1:37:42 https://bbs.csdn.net/topics/390078819
+||s3m.*.com/*$image
+
+! 2018/8/6 下午3:13:13 https://bbs.csdn.net/topics/392172997?page=1
+bbs.csdn.net##.clk
+
+! 2018/8/7 上午9:52:46 https://blog.csdn.net/jamie0515/article/details/76522036
+blog.csdn.net##main > div:nth-of-type(3)
+
+! 2018/8/15 上午8:58:55 https://zhidao.baidu.com/ihome/homepage/recommendquestion
+||gss0.bdstatic.com/*$image
+
+! 2018/8/20 下午3:55:30 https://baike.baidu.com/item/%E5%92%8C%E8%8F%9C%E5%A4%B4/1971346?fr=aladdin
+baike.baidu.com##.wgt_carousel_aniUnit
+
+! 2018/8/20 下午3:55:59 https://baike.baidu.com/item/%E5%92%8C%E8%8F%9C%E5%A4%B4/1971346?fr=aladdin
+baike.baidu.com##.J-items
+
+! 2018/8/20 下午3:57:13 https://baike.baidu.com/item/%E5%92%8C%E8%8F%9C%E5%A4%B4/1971346?fr=aladdin
+baike.baidu.com##.lemmaWgt-promotion-slide > .promotion_viewport > dl
+
+! 2018/8/20 下午4:16:25 https://baike.baidu.com/item/%E5%92%8C%E8%8F%9C%E5%A4%B4/1971346?fr=aladdin
+baike.baidu.com##.tashuo-list
+
+! 2018/8/22 下午4:57:17 https://www.baidu.com/s?ie=UTF-8&wd=%E9%A9%B1%E5%8A%A8%E7%B2%BE%E7%81%B5
+www.baidu.com##.SOwzoL
+
+! 2018/8/22 下午6:30:50 https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=%E9%A9%B1%E5%8A%A8%E7%B2%BE%E7%81%B5&oq=%25E5%258D%259A%25E5%25AE%25A2%25E5%259B%25AD%2520Wlansvc&rsv_pq=c6e93455000d72dc&rsv_t=b7c4FUCfmHK%2BWyf6Tllf212VUBe4fTcH%2BV2vcMmEujiyfAeUC6Ga9ix44f8&rqlang=cn&rsv_enter=1&inputT=4988&rsv_sug2=0&rsv_sug4=4988
+www.baidu.com##.unZNkA
+
+! 2018/8/23 上午11:19:00 https://www.sohu.com/a/142542132_466874
+www.sohu.com##.hot-atlas.bord.clearfix
+
+! 2018/8/23 下午1:02:35 https://blog.csdn.net/xmuecor/article/details/56491255
+||cjhd.mediav.com/*$subdocument
+
+! 2018/8/23 下午1:02:49 https://blog.csdn.net/xmuecor/article/details/56491255
+||p3.ssl.qhimg.com/*$image
+
+! 2018/8/23 下午1:08:23 http://blog.sina.com.cn/s/blog_d95c5be00102x7f8.html
+blog.sina.com.cn###column_1
+
+! 2018/8/27 下午4:50:14 https://zhidao.baidu.com/ihome/homepage/recommendquestion
+zhidao.baidu.com##.recommend-question-container>:has-text(1分钟)
+zhidao.baidu.com##.recommend-question-container>:has-text(粉丝)
+zhidao.baidu.com##.recommend-question-container>:has-text(勤哲)
+
+! 2018/8/28 上午9:46:23 https://www.jb51.net/article/59293.htm
+www.jb51.net##.clearfix.mb10.main
+
+! 2018/8/29 下午3:12:51 https://blog.csdn.net/wantbar/article/details/76746899
+blog.csdn.net##.clearfix.recommend-item-box
+
+! 2018/8/29 下午3:13:17 https://blog.csdn.net/wantbar/article/details/76746899
+blog.csdn.net##div.recommend-ad-box
+
+! 2018/9/3 下午5:30:45 https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91&oq=%25E5%25BE%25AE%25E4%25BF%25A1%25E5%25BC%2580%25E5%258F%2591&rsv_pq=e37371b90003466b&rsv_t=3722v%2FP2lyijB9l4pSg%2BVvnZIx5ASXgDCGm%2BL5CQMl0UhqKK2qTIiwuOSVc&rqlang=cn&rsv_enter=0
+*.baidu.com###content_left>:has-text(广告)
+
+! 2018/9/10 上午10:00:16 https://note.youdao.com/web/#/file/recent/note/4aa88b75d303413313b8babb8a2937b4/
+||oimagec6.ydstatic.com/image*$image
+
+! 2018/9/20 下午6:29:45 http://www.excelapi.net/ad.html
+||pdfapp.huiyaosoft.com/*$image
+
+! 2020/5/6 https://jingyan.baidu.com
+jingyan.baidu.com##.wgt-feeds-video
+
+! 2020/7/14 https://zhidao.baidu.com
+zhidao.baidu.com##.update-modal-mask
+
+! 2020/7/24 https://www.baidu.com
+www.baidu.com###\31  > .c-gap-top-small.c-row > .c-span-last.c-span18 > .c-abstract
+
+! 2020-09-26 https://translate.google.cn
+translate.google.cn##.notification-container.tlid-notification-container
