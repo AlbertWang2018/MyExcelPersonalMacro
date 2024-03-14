@@ -1,0 +1,12 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.15.0.0
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Tue Jan 30 21:36:51 2024"
+  rime_version: 1.8.5
+patch:
+  schema_list:
+    - schema: wubi_pinyin
+    - schema: easy_en # 添加英文输入法
+  "switcher/hotkeys":
+    - "Control+F4"
