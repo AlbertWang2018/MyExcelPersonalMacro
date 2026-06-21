@@ -1,4 +1,7 @@
 import telebot,requests,json,re,os
+import threading
+from http.server import SimpleHTTPRequestHandler
+from socketserver import TCPServer
 from datetime import datetime,timedelta
 
 BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "你的备用Token")
@@ -86,67 +89,23 @@ def echo_all(message):
     else:
     	bot.reply_to(message, "please input '/soc volt', volt is a value between 2886mv and 3372mv, 2.886-3.372 both OK. /cap volt1 volt2")
 
-def check():
-    cookies = {
-        'ASP.NET_SessionId': 'i1rzmscfuhqmindkd14rbyke',
-        'VisaBookingType': 'AU',
-        '.ASPXAUTH': '2671346197FF38C5DB556AD9572E0EADEE95CA74D1DC085235CF67006B0DAA50571CAEB383080531963EE8C9F30FF406ABE63D2055ACA08003E8F77FA39E62F5A8C445C93D91931126CFA8E793B47CC1C4E1D7D0CFA84D65D5E74D0BCC775B4CAA5BFDDF9C55469A19D5EFB32FF43A0E6A47B10E8D135949F55FDF35F1F0E7C1',
-        'AWSALB': 'O9DMxt4BNtEXHMZgFF3uin+lYqWTCqE0g+Xcc2Rhosp0GL7ISByXacEhtJL+DTzqvLyLKTGXWnLFL8XDWvD6EMqNQfDdsQpA0YRE6bzMtOAt7qvGNCk7WbceKHuF',
-        'AWSALBCORS': 'O9DMxt4BNtEXHMZgFF3uin+lYqWTCqE0g+Xcc2Rhosp0GL7ISByXacEhtJL+DTzqvLyLKTGXWnLFL8XDWvD6EMqNQfDdsQpA0YRE6bzMtOAt7qvGNCk7WbceKHuF',
-        'ADRUM': 's=1724327853775&r=https%3A%2F%2Fbmvs.onlineappointmentscheduling.net.au%2Foasis%2FLocation.aspx%3F0',
-    }
+def run_fake_web_server():
+    # Render 会动态分配一个 PORT 环境变量，如果没有就默认 10000
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    server_address = ('0.0.0.0', port)
+    
+    # 简单的 HTTP 服务器，假装自己是个网页应用
+    httpd = TCPServer(server_address, SimpleHTTPRequestHandler)
+    print(f"Fake Web Server running on port {port}...")
+    httpd.serve_forever()
 
-    headers = {
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-        'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-AU;q=0.6',
-        'cache-control': 'max-age=0',
-        'content-type': 'application/x-www-form-urlencoded',
-        # 'cookie': 'ASP.NET_SessionId=i1rzmscfuhqmindkd14rbyke; VisaBookingType=AU; .ASPXAUTH=2671346197FF38C5DB556AD9572E0EADEE95CA74D1DC085235CF67006B0DAA50571CAEB383080531963EE8C9F30FF406ABE63D2055ACA08003E8F77FA39E62F5A8C445C93D91931126CFA8E793B47CC1C4E1D7D0CFA84D65D5E74D0BCC775B4CAA5BFDDF9C55469A19D5EFB32FF43A0E6A47B10E8D135949F55FDF35F1F0E7C1; AWSALB=O9DMxt4BNtEXHMZgFF3uin+lYqWTCqE0g+Xcc2Rhosp0GL7ISByXacEhtJL+DTzqvLyLKTGXWnLFL8XDWvD6EMqNQfDdsQpA0YRE6bzMtOAt7qvGNCk7WbceKHuF; AWSALBCORS=O9DMxt4BNtEXHMZgFF3uin+lYqWTCqE0g+Xcc2Rhosp0GL7ISByXacEhtJL+DTzqvLyLKTGXWnLFL8XDWvD6EMqNQfDdsQpA0YRE6bzMtOAt7qvGNCk7WbceKHuF; ADRUM=s=1724327853775&r=https%3A%2F%2Fbmvs.onlineappointmentscheduling.net.au%2Foasis%2FLocation.aspx%3F0',
-        'origin': 'https://bmvs.onlineappointmentscheduling.net.au',
-        'priority': 'u=0, i',
-        'referer': 'https://bmvs.onlineappointmentscheduling.net.au/oasis/Location.aspx',
-        'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Microsoft Edge";v="128"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"Windows"',
-        'sec-fetch-dest': 'document',
-        'sec-fetch-mode': 'navigate',
-        'sec-fetch-site': 'same-origin',
-        'sec-fetch-user': '?1',
-        'upgrade-insecure-requests': '1',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0',
-    }
-
-    data = {
-        '__EVENTTARGET': '',
-        '__EVENTARGUMENT': '',
-        '__VIEWSTATE': '/wEPDwUKMjEwNjc2OTI3MQ8WAh4MR29vZ2xlQXBpVXJsBVNodHRwczovL21hcHMuZ29vZ2xlYXBpcy5jb20vbWFwcy9hcGkvanM/a2V5PUFJemFTeURqcUFXQ21idGxGeEx0R0VoY0RmU0FYV1BreERZcjlVVRYCZg9kFgICAw9kFgJmD2QWBgIBD2QWBAIBDxYCHgdWaXNpYmxlaGQCAg8PFgIeBFRleHQFF1N0ZXA6IENob29zZSBhIGxvY2F0aW9uZGQCAw8PFgIeEERpc3RhbmNlU2VhcmNoZWQFAzIwMGRkAgUPFgQeBWNsYXNzBRdibHVlLWJ1dHRvbiBncmV5LWJ1dHRvbh4IZGlzYWJsZWQFCGRpc2FibGVkZGRVfiDEU+mYNtamNuXJUYppbwUsfSQA6aRCmPtWyPXAXA==',
-        '__VIEWSTATEGENERATOR': '08CE2E6F',
-        '__EVENTVALIDATION': '/wEdABC8hCdSGzTiWDLopy7lE37EYbXED9+qOCVpnPsW1NfQM02oIekcKFYSGcuyWU5owvaj5PCS+9EoAtWOeDrA22ZxuRUWmFEFqwyIbqEA7Ju+sQsSpVtmd74LZfecBnrP/xRqePcz+HKYrbHRN6dckaeqZNBJq8K39m1cdBixXRDSBj4/MXdUic8EbDWQ/cYiBFbcAJzBTYyXOXbgzVPsDg1jLayys7d9xUAlofJw5EiWcur1Af1xEkA/m3hofu9irOAUSTzjIYa+VsFvCQP1VL/tbGufEMU5QrhvXXSVUykHHFFGs1zvEoPu1+SsaQT1XzzWVNhSvKNLKfqKNvafCHorrV3VgscR1Av5IGyMYoceHjvgdXi5PZsSmBRvT3wIMJg=',
-        'ctl00$ContentPlaceHolder1$SelectLocation1$txtSuburb': 'Adelaide',
-        'ctl00$ContentPlaceHolder1$SelectLocation1$ddlState': 'SA',
-        'ctl00$ContentPlaceHolder1$SelectLocation1$btnSearch': 'search',
-        'ctl00$ContentPlaceHolder1$SelectLocation1$hdnSearchCoord': '-34.928,138.601',
-        'ctl00$ContentPlaceHolder1$hdnLocationID': '',
-    }
-
-    r = requests.post(
-        'https://bmvs.onlineappointmentscheduling.net.au/oasis/Location.aspx',
-        cookies=cookies,
-        headers=headers,
-        data=data,
-    )
-    temp=re.findall(r'(?<=<span>)(.*?)(?=</span>)',r.text)
-    if len(temp[2])>20:
-        res=' '.join(str(temp[2]).replace('<br />',' ').split(' ')[1:])
-        rq=res.split(' ')[0]
-        t=datetime.now()
-        d2=(t+timedelta(days=15))
-        d1 = datetime.strptime(rq, '%d/%m/%Y')
-        if d1<d2:
-            return 'OK '+ res
-        else:
-            return 'Waiting '+ res
-    else:
-        return 'Not Available'
-
-bot.infinity_polling()
+if __name__ == "__main__":
+    print("Bot is starting...")
+    
+    # 1. 开启一个后台线程去跑假的网页服务，应付 Render 的检测
+    web_thread = threading.Thread(target=run_fake_web_server, daemon=True)
+    web_thread.start()
+    
+    # 2. 主线程继续死循环跑你的 Telegram Bot
+    bot.infinity_polling()
