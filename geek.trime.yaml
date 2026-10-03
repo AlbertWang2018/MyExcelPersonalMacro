@@ -712,7 +712,7 @@ preset_keyboards:
       - {click: Command_L, label_symbol: 'ic@keyboard-settings-outline', key_symbol_offset_y: -47, popup: [ "Theme_settings" ], swipe_up: 'Theme_settings', key_back_color: c5, key_text_color: tenter}
       - {click: Control_L, label_symbol: 'ic@palette-outline', key_symbol_offset_y: -47, popup: [ "Color_switch"], swipe_up: 'Color_switch', key_text_size: "14", key_back_color: c5, key_text_color: th4}
       - {click: space4, label_symbol: "ic@microphone-outline", key_symbol_offset_y: -47, ascii: space3, swipe_up: 'Mode_switch', swipe_down: 'Mode_switch', long_click: "VOICE_ASSIST", key_text_size: "12", symbol_text_size: 9, key_symbol_offset_x: 35, key_back_color: bkg, key_text_color: th1, width: 27}
-      - {click: '.', label: '。', label_symbol: ',', swipe_up: ',', popup: "Punct_switch", key_back_color: bh4, key_text_color: th4}
+      - {click: period, label: '。', label_symbol: ',', swipe_up: ',', popup: "Punct_switch", key_back_color: bh4, key_text_color: th4}
       - {click: Alt_L, label_symbol: 'ic@web', key_symbol_offset_y: -47, popup: ["Menu", "IME_switch"], swipe_up: 'IME_switch', composing: Escape1, key_text_size: "14", key_back_color: c5, key_text_color: th4}
       - {click: Return, swipe_up: Escape, key_back_color: benter, key_text_color: tenter, width: 14}
 
